@@ -1,8 +1,9 @@
 # OpenSSL::PKCS7加密
 证书密钥对
 ```ruby
-cert = @esnecil_private_cert
-key  = @esnecil_private_key
+pkey = 'server.pem' # 包含 OpenSSL 自签名证书的 key 和 cert
+cert = OpenSSL::X509::Certificate.new(File.read(pkey))
+key  = OpenSSL::PKey::RSA.new(File.read(pkey))
 ```
 加密和解密（加密用到1个，解密用到2个）
 ```ruby
