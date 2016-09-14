@@ -6,7 +6,7 @@
 2.1.8 :002 > $:
  => ["/opt/meta/lib", "/opt/meta/vendor", "/opt/meta/app/admin", "/opt/meta/app/assets", "/opt/meta/app/controllers", "/opt/meta/app/helpers", "/opt/meta/app/mailers", "/opt/meta/app/models", ...]
 ```
-因此当使用 `require 'abc'` 时，Ruby 便会在以上目中查找是否有 `abc.rb` 这个文件里是否存在 `module Abc` 这个模块。
+因此当使用 `require 'abc'` 时，Ruby 便会在以上目录中查找是否有 `abc.rb` 这个文件，以及文件里是否存在 `module Abc` 这个模块。
 
 如果需要添加自定义的环境变量，可以：
 ```ruby
