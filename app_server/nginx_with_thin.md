@@ -85,7 +85,10 @@ module Thin
         Dir.chdir('opt/meta/web_ui')
         if get_pid == 0 || (Process.kill(0, get_pid).to_i rescue 0) != 1
           # 本地模式 3001 端口启动应用服务器，外部无法访问，只能通过 nginx 下发
-          system("thin -a 127.0.0.1 -p 3001 -P logs/thin.pid -l logs/thin.log -d start")
+          options = ['-a', '127.0.0.1', '-p', '3001'] # 127.0.0.1:3001
+          options += ['-P', "logs/thin.pid", '-l', "logs/thin.log"] # 日志和PID位置
+          options +=  ['-d', 'start'] # 以服务模式启动
+          system('thin', *options) # 以设定的配置启动 Thin
         end
         puts 'Meta is running'
       end
