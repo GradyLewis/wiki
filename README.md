@@ -5,7 +5,8 @@ As we all know, it's wiki.
 [$LOAD_PATH和$:](./ruby/load_path.md)
 ## App Server
 [Nginx的编译和Ruby控制模块编写](./app_server/nginx_compile_and_control.md)<br/>
-[Nginx + Thin 运行 Rails 项目](./app_server/nginx_with_thin.md)
+[Nginx + Thin 运行 Rails 项目](./app_server/nginx_with_thin.md)<br/>
+[Ruby代码执行 Thin & Puma](./app_server/ruby_exec_thin_and_puma.md)
 ## Rails
 ## Gems
 [RestClient](./gems/rest_client.md)
