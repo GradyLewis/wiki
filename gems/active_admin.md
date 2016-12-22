@@ -40,6 +40,7 @@ ActiveAdmin.register Model do
     f.inputs '权限管理' do
       f.input :name, :required => true
       f.input :password, :as=> :password
+      f.input :start_at, :as => :datepicker # 集成 datepicker 插件，精确到天
       f.input :note, :as => :kindeditor, :simple_mode => true # 集成了 kindeditor 插件
       f.input :type, :as => :select, :collection => Model::TYPE.invert
     end

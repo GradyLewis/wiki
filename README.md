@@ -9,6 +9,7 @@ As we all know, it's wiki.
 [Ruby代码执行 Thin & Puma](./app_server/ruby_exec_thin_and_puma.md)
 ## Rails
 ## Gems
+[一些常用的GEM](./gems/some_common_gem.md)<br/>
 [RestClient](./gems/rest_client.md)<br/>
 [ActiveAdmin](./gems/active_admin.md)
 ## Algorithm & Encryption
