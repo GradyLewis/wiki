@@ -10,8 +10,11 @@ As we all know, it's wiki.
 ## Rails
 ## Gems
 [RestClient](./gems/rest_client.md)
+[ActiveAdmin](./gems/active_admin.md)
 ## Algorithm & Encryption
 [OpenSSL生成自签名证书](./algorithm_encryption/self_signed_cert.md)<br/>
 [OpenSSL::PKCS7加密](./algorithm_encryption/openssl_pkcs7.md)<br/>
 [OpenSSL::Cipher::RC4加密](./algorithm_encryption/openssl_cipher_rc4.md)<br/>
 [Digest::SHA256和OpenSSL::Cipher加密](./algorithm_encryption/digest_sha256_openssl_cipher.md)
+## JS
+[一些常用的JS插件](./js/some_common_js_plugin.md)
