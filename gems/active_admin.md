@@ -34,6 +34,7 @@ ActiveAdmin.register Model do
     end
     actions
   end
+  
    # 表单页面
   form do |f|
     f.inputs '权限管理' do
@@ -44,6 +45,7 @@ ActiveAdmin.register Model do
     end
     f.actions
   end
+  
   # 详细页面
   show do
     attributes_table do
@@ -90,7 +92,8 @@ ActiveAdmin.register Model do
     end
     
     panel '表单页面' do
-      active_admin_form_for(:order, url: {:action=>"add_pay",:id=>resource.id, :controller => "/#{ActiveAdmin.application.default_namespace.to_s}/apply_forms"}) do |f|
+      active_admin_form_for(:order, url: {:action=>"add_pay",:id=>resource.id, 
+                            :controller => "/#{ActiveAdmin.application.default_namespace.to_s}/apply_forms"}) do |f|
         columns do
           column do
             f.inputs do
@@ -112,9 +115,11 @@ ActiveAdmin.register Model do
   # 侧边栏
   sidebar "审核", only: :show do
     if resource.present?
-      active_admin_form_for(:apply_form, url: {:action=>"apply",:id=>record.id,:controller => "/#{ActiveAdmin.application.default_namespace.to_s}/apply_forms"}) do |f|
+      active_admin_form_for(:apply_form, url: {:action=>"apply",:id=>record.id,
+                            :controller => "/#{ActiveAdmin.application.default_namespace.to_s}/apply_forms"}) do |f|
         f.inputs do
-          f.input :state, :required => true, :as => :select, :collection => ApplyForm::STATE_DATA.invert, :include_blank=>false, :label=>"状态",
+          f.input :state, :required => true, :as => :select, :collection => ApplyForm::STATE_DATA.invert, 
+                  :include_blank=>false, :label=>"状态",
                   :input_html=>{:name=>"state",:style=>"width:150px;"}
           f.input :note,:as=>:text,:label=>"备注",:input_html=>{:name=>"note",:style=>"height:55px;width:150px;"}
         end
@@ -127,8 +132,10 @@ ActiveAdmin.register Model do
   
   # 右上角按钮
   action_item :only => [:show] do
-    text_node link_to '生成证书文件', {:action => 'generate_cer'}, :method => :post, :data => {:confirm => '您确定要生成证书文件？', :disable_with => '请等待...'}
-    text_node link_to '生成证书文件2', {:action => 'generate_cer2'}, :method => :post, :data => {:confirm => '您确定要生成证书文件？', :disable_with => '请等待...'}
+    text_node link_to '生成证书文件', {:action => 'a'}, :method => :post, 
+                      :data => {:confirm => '？', :disable_with => '请等待...'}
+    text_node link_to '生成证书文件2', {:action => 'b'}, :method => :post, 
+                      :data => {:confirm => '？', :disable_with => '请等待...'}
   end
   
   # 增加action
@@ -139,7 +146,8 @@ ActiveAdmin.register Model do
      # resource 即为 member action 中传递的对象
      p resource.id
      # ActiveAdmin.application.default_namespace.to_s 获得后台路径
-     redirect_to :action => :show, :controller => "/#{ActiveAdmin.application.default_namespace.to_s}/admin_roles", :id => resource.id
+     redirect_to :action => :show, :controller => "/#{ActiveAdmin.application.default_namespace.to_s}/admin_roles", 
+                 :id => resource.id
   end
 end
 ```
