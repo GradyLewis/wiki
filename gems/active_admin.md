@@ -7,8 +7,10 @@ ActiveAdmin.register Model do
   actions :index, :show, :destroy, :edit, :update
   
   # 快速查询
-  scope :all, default: true, :label => '全部'
-  scope("等待处理") { |scope| scope.where(tp: 0) }
+  scope :all, default: true
+  scope proc{ '全部' }, :all
+  scope(proc{ '未响应' }, :not_handled, :default => true) {|scope| scope.where(tp: 1) }
+  scope(proc{ '已响应' }, :handled) {|scope| scope.where(tp: 0) }
   
   # 授权提交的表单中允许写入的字段
   permit_params [:title, :name]
