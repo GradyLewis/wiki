@@ -30,11 +30,21 @@ ActiveAdmin.register Model do
   
   # index 页面
   index do
+    selectable_column # 多选复选框
     column :title
     column :type do |record|
       Model::TYPE[record.type]
     end
     actions
+  end
+  
+  # index 页面批量操作
+  batch_action '标记正常' do |ids|
+    Alarm.where(:id => ids).each do |alarm|
+      alarm.update_attributes({:admin_user_id => current_admin_user.id, :deal_at => Time.now, :status => 0, :tp => 2})
+    end
+    flash[:notice] = '批量标记成功。'
+    redirect_to :action => 'index'
   end
   
    # 表单页面
