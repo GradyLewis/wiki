@@ -9,6 +9,8 @@ As we all know, it's wiki.
 [Ruby代码执行 Thin & Puma](./app_server/ruby_exec_thin_and_puma.md)<br/>
 [Nginx只允许本机访问](./app_server/nginx_only_local_visit.md)
 ## Rails
+[定时任务运行Rails Task](./rails/cron_tab_task.md)<br/>
+[使用Rails自带的接口类开发接口](./rails/rails_action_controller_base.md)
 ## Gems
 [一些常用的GEM](./gems/some_common_gem.md)<br/>
 [RestClient](./gems/rest_client.md)<br/>
