@@ -6,7 +6,8 @@ As we all know, it's wiki.
 ## App Server
 [Nginx的编译和Ruby控制模块编写](./app_server/nginx_compile_and_control.md)<br/>
 [Nginx + Thin 运行 Rails 项目](./app_server/nginx_with_thin.md)<br/>
-[Ruby代码执行 Thin & Puma](./app_server/ruby_exec_thin_and_puma.md)
+[Ruby代码执行 Thin & Puma](./app_server/ruby_exec_thin_and_puma.md)<br/>
+[Nginx只允许本机访问](./app_server/nginx_only_local_visit.md)
 ## Rails
 ## Gems
 [一些常用的GEM](./gems/some_common_gem.md)<br/>
@@ -20,3 +21,7 @@ As we all know, it's wiki.
 [一些常用的正则](./algorithm_encryption/some_common_reg.md)
 ## JS
 [一些常用的JS插件](./js/some_common_js_plugin.md)
+## Linux
+[Ubuntu配置JDK环境](./linux/ubuntu_jdk.md)<br/>
+[DEB包使用本地依赖包安装](./linux/deb_local_install.md)<br/>
+[UbuntuFcitxSunpinyin黑屏](./linux/fcitx_sunpinyin.md)
