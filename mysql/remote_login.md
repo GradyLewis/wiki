@@ -14,8 +14,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.1' IDENTIFIED BY 'root' WITH GR
 # 使规则生效
 FLUSH PRIVILEGES;
 
-# 删除远程用户
+# 删除授权
 use mysql;
+REVOKE ALL PRIVILEGES ON *.* FROM 'root'@'%';
 delete from user where host = '%' and user = 'root';
 FLUSH PRIVILEGES;
 ```
