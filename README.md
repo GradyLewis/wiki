@@ -26,4 +26,5 @@ As we all know, it's wiki.
 ## Linux
 [Ubuntu配置JDK环境](./linux/ubuntu_jdk.md)<br/>
 [DEB包使用本地依赖包安装](./linux/deb_local_install.md)<br/>
-[UbuntuFcitxSunpinyin黑屏](./linux/fcitx_sunpinyin.md)
+[UbuntuFcitxSunpinyin黑屏](./linux/fcitx_sunpinyin.md)<br/>
+[UFW防火墙基础配置](./linux/ufw_set.md)

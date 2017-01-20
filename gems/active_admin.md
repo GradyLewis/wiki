@@ -6,6 +6,9 @@ ActiveAdmin.register Model do
   # 只允许的的默认action
   actions :index, :show, :destroy, :edit, :update
   
+  # 清除右上角的所有按钮
+  config.clear_action_items!
+  
   # 快速查询
   scope :all, default: true
   scope proc{ '全部' }, :all
