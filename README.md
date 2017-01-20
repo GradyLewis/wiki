@@ -28,3 +28,5 @@ As we all know, it's wiki.
 [DEB包使用本地依赖包安装](./linux/deb_local_install.md)<br/>
 [UbuntuFcitxSunpinyin黑屏](./linux/fcitx_sunpinyin.md)<br/>
 [UFW防火墙基础配置](./linux/ufw_set.md)
+## MySQL
+[MYSQL远程登录权限设置](./mysql/remote_login.md)
