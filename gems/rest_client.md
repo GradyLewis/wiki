@@ -10,6 +10,8 @@ client = RestClient::Resource.new('http://address', :read_timeout => 10, :open_t
 data = {:x1 => 1, :x2 => 2}
 # 上传文件
 data = {:multipart => true, :file => File.new('/tmp/1.txt')}
+# get 请求
+res = client.get(:params => data)
 # 加上 cookies 的 post 请求
 res = client.post data, :content_type => :json, :accept => :json, :cookies => {'sid' => '345sf-324as-sdfg32-sdf342'}
 # 响应码
