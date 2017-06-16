@@ -29,7 +29,8 @@ As we all know, it's wiki.
 [UbuntuFcitxSunpinyin黑屏](./linux/fcitx_sunpinyin.md)<br/>
 [UFW防火墙基础配置](./linux/ufw_set.md)<br/>
 [Web中不使用密码执行sudo命令](./linux/sudoer.md)<br/>
-[Rubymine中fcitx在sudo无法输入的问题](./linux/sudo_fcitx.md)
+[Rubymine中fcitx在sudo无法输入的问题](./linux/sudo_fcitx.md)<br/>
+[将命令加入系统环境变量的几种方式](./linux/add_command_to_env.md)
 ## MySQL
 [MYSQL远程登录权限设置](./mysql/remote_login.md)<br/>
 [MYSQL设定编码utf8](./mysql/utf8.md)
