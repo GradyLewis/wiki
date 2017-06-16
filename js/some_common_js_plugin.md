@@ -5,4 +5,8 @@ https://github.com/crlcu/multiselect
 https://github.com/xdan/datetimepicker
 ## JQuery Palette Color Picker 颜色拾取器
 https://github.com/carloscabo/jquery-palette-color-picker
+## 手机端图片轮换：
+http://touchslider.com/
+
+http://www.17sucai.com/pins/demoshow/4857
 
