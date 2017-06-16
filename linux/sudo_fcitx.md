@@ -7,7 +7,7 @@ QT_IM_MODULE=xim
 </pre>
 
 因此解决方法如下（对ibus也有效，把对应的输入法修改为ibus即可）:
-##方法1
+## 方法1
 1.创建 /etc/sudoers_env 加入以下内容代码:
 ```ruby
 GTK_IM_MODULE=xim
@@ -19,11 +19,11 @@ QT4_IM_MODULE=xim
 Defaults env_keep += "XMODIFIERS"
 Defaults env_file="/etc/sudoers_env"
 ```
-##方法2
+## 方法2
 ```ruby
 sudo XMODIFIERS=@im=fcitx GTK_IM_MODULE=xim ./rubymine.sh
 ```
-##方法3
+## 方法3
 直接在 rubymine.sh 里增加环境变量
 ```ruby
 export XMODIFIERS=@im=fcitx
